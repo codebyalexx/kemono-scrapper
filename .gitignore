@@ -1,0 +1,8 @@
+downloads/
+node_modules/
+.env
+bump.json
+cookies.json
+.idea/
+.code/
+.vscode/

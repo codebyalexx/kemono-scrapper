@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="bg-slate-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <title>Kemono Scrapper Webview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *::-webkit-scrollbar {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 h-screen w-screen">
+    <div class="h-screen w-screen flex items-center justify-center index-10">
+        <div class="p-5 rounded-lg bg-slate-800 shadow-lg w-96">
+            <div class="grid grid-cols-9 grid-rows-2 gap-2 mb-5">
+                <label for="url" class="row-span-1 col-span-9 text-slate-300 text-base font-bold">Add new artist</label>
+                <input id="url" type="text" placeholder="Artist URL" class="text-sm bg-slate-700 row-span-2 col-span-7 px-3 outline-none rounded-lg text-slate-300"/>
+                <button class="rounded-lg bg-blue-600 pointer row-span-2 col-span-2 text-white outline-none font-bold flex items-center justify-center" id="add">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                    </svg>
+                </button>
+            </div>
+            <span class="block w-full h-0.5 bg-slate-700 mb-5"></span>
+            <div id="artists" class="max-h-96 overflow-y-scroll"></div>
+        </div>
+
+    </div>
+
+    <div id="cursorShadow" class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
